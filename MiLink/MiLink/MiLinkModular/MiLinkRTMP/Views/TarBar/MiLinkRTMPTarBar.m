@@ -184,7 +184,7 @@
     
     _screenshotsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    [_screenshotsButton setImage:[UIImage imageNamed:@"icon_screenshots"]
+    [_screenshotsButton setImage:[UIImage imageNamed:@"icon_camera_on"]
                         forState:UIControlStateNormal];
     
     [_screenshotsButton addTarget:self
@@ -196,8 +196,8 @@
 
 - (void)screenshotsButtonAction:(UIButton *)sender {
     
-    if (self.miLinkScreenshotsBlock) {
-        self.miLinkScreenshotsBlock(sender);
+    if (self.miLinkCameraBlock) {
+        self.miLinkCameraBlock(sender);
     }
 }
 

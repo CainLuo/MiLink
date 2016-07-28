@@ -14,7 +14,7 @@
 @property (nonatomic, copy) void(^miLinkChangeCameraBlock)(UIButton *sender);
 @property (nonatomic, copy) void(^miLinkRecordingBlock)(UIButton *sender);
 @property (nonatomic, copy) void(^miLinkPhotoFlashBlock)(UIButton *sender);
-@property (nonatomic, copy) void(^miLinkScreenshotsBlock)(UIButton *sender);
+@property (nonatomic, copy) void(^miLinkCameraBlock)(UIButton *sender);
 
 @property (nonatomic, strong, readonly) UIButton *microphoneButton;
 @property (nonatomic, strong, readonly) UIButton *changeCameraButton;

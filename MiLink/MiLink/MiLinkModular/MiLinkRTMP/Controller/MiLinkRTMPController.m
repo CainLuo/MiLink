@@ -94,18 +94,78 @@
     CAL_WEAK_SELF(weakSelf);
     
     [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkMicroPhoneBlock:^(UIButton *sender) {
+        
+        if (sender.tag == 0) {
+            
+            [weakSelf.livePublisher setMicEnable:NO];
+
+            [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                           changeImage:@"icon_microphone_off"];
+
+            sender.tag = 1;
+        } else {
+        
+            [weakSelf.livePublisher setMicEnable:YES];
+            
+            [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                           changeImage:@"icon_microphone_on"];
+
+            sender.tag = 0;
+        }
     }];
     
     [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkChangeCameraBlock:^(UIButton *sender) {
+        
+        [weakSelf.livePublisher setFlashEnable:NO];
+
+        [weakSelf.livePublisher switchCamera];
+        [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                       changeImage:@"icon_camera_change"];
     }];
     
     [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkRecordingBlock:^(UIButton *sender) {
     }];
     
     [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkPhotoFlashBlock:^(UIButton *sender) {
+        
+        if (sender.tag == 0) {
+            
+            [weakSelf.livePublisher setFlashEnable:YES];
+            
+            [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                           changeImage:@"icon_flash_on"];
+            
+            sender.tag = 1;
+        } else {
+            
+            [weakSelf.livePublisher setFlashEnable:NO];
+            
+            [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                           changeImage:@"icon_flash_off"];
+            
+            sender.tag = 0;
+        }
     }];
     
-    [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkScreenshotsBlock:^(UIButton *sender) {
+    [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkCameraBlock:^(UIButton *sender) {
+        
+        if (sender.tag == 0) {
+            
+            [weakSelf.livePublisher setCamEnable:NO];
+            
+            [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                           changeImage:@"icon_camera_off"];
+            
+            sender.tag = 1;
+        } else {
+            
+            [weakSelf.livePublisher setCamEnable:YES];
+            
+            [weakSelf animationOptionTransitionFlipFromRightWithButton:sender
+                                                           changeImage:@"icon_camera_on"];
+            
+            sender.tag = 0;
+        }
     }];
     
     [self.miLinkRTMPViewManager.miLinkNavigationBar setMiLinkSwitchFrameRateButtonBlock:^(UIButton *sender) {
