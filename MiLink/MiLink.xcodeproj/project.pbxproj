@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4109AE61D49A82000109E87 /* libNodeMediaClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AE31D49A82000109E87 /* libNodeMediaClient.a */; };
+		A4109AE81D49A83900109E87 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AE71D49A83900109E87 /* libz.tbd */; };
+		A4109AEA1D49A84300109E87 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AE91D49A84300109E87 /* VideoToolbox.framework */; };
+		A4109AEC1D49A84E00109E87 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AEB1D49A84E00109E87 /* SystemConfiguration.framework */; };
+		A4109AEE1D49A85A00109E87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AED1D49A85A00109E87 /* AudioToolbox.framework */; };
+		A4109AF01D49A86400109E87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AEF1D49A86400109E87 /* AVFoundation.framework */; };
+		A4109AF21D49A86900109E87 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AF11D49A86900109E87 /* CoreMedia.framework */; };
+		A45968321D4657AD00FF9EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968311D4657AD00FF9EE1 /* main.m */; };
+		A459683D1D4657AD00FF9EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A459683C1D4657AD00FF9EE1 /* Assets.xcassets */; };
+		A459684B1D4657AD00FF9EE1 /* MiLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A459684A1D4657AD00FF9EE1 /* MiLinkTests.m */; };
+		A45968561D4657AD00FF9EE1 /* MiLinkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968551D4657AD00FF9EE1 /* MiLinkUITests.m */; };
+		A45968671D465C0300FF9EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968651D465C0300FF9EE1 /* AppDelegate.m */; };
+		A45969CC1D4666F700FF9EE1 /* GeneralDeveloperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45969CB1D4666F700FF9EE1 /* GeneralDeveloperKit.framework */; };
+		A45969DB1D46680A00FF9EE1 /* MiLinkLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45969D11D46680A00FF9EE1 /* MiLinkLoginController.m */; };
+		A45969DE1D46680A00FF9EE1 /* MiLinkLoginViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A45969DA1D46680A00FF9EE1 /* MiLinkLoginViewManager.m */; };
+		A48FDF941D4760BB004F92C4 /* MiLinkLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF921D4760BB004F92C4 /* MiLinkLoginModel.m */; };
+		A48FDF971D4760E7004F92C4 /* MiLinkUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF961D4760E7004F92C4 /* MiLinkUserInfoModel.m */; };
+		A48FDF9B1D47619B004F92C4 /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF9A1D47619B004F92C4 /* UserDataModel.m */; };
+		A4C153E21D48B0F700A87DF3 /* MiLinkRTMPTarBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C153E11D48B0F700A87DF3 /* MiLinkRTMPTarBar.m */; };
+		A4C643CB1D47A7EF00F25B57 /* MiLinkRTMPController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C643CA1D47A7EF00F25B57 /* MiLinkRTMPController.m */; };
+		A4C643CE1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C643CD1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m */; };
+		A4C643D11D48418300F25B57 /* MiLinkRTMPViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C643D01D48418300F25B57 /* MiLinkRTMPViewManager.m */; };
+		A4C643D31D486CA500F25B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C643D21D486CA500F25B57 /* LaunchScreen.storyboard */; };
+		A4EFA8B21D489FBB00B5199B /* MiLinkDemonstrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA8AE1D489FBB00B5199B /* MiLinkDemonstrationView.m */; };
+		A4EFA8B31D489FBB00B5199B /* MiLinkLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA8B11D489FBB00B5199B /* MiLinkLoginView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A45968471D4657AD00FF9EE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A45968251D4657AC00FF9EE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A459682C1D4657AC00FF9EE1;
+			remoteInfo = MiLink;
+		};
+		A45968521D4657AD00FF9EE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A45968251D4657AC00FF9EE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A459682C1D4657AC00FF9EE1;
+			remoteInfo = MiLink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4109AE31D49A82000109E87 /* libNodeMediaClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNodeMediaClient.a; sourceTree = "<group>"; };
+		A4109AE41D49A82000109E87 /* LivePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePlayer.h; sourceTree = "<group>"; };
+		A4109AE51D49A82000109E87 /* LivePublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePublisher.h; sourceTree = "<group>"; };
+		A4109AE71D49A83900109E87 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A4109AE91D49A84300109E87 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		A4109AEB1D49A84E00109E87 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A4109AED1D49A85A00109E87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A4109AEF1D49A86400109E87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A4109AF11D49A86900109E87 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A459682D1D4657AC00FF9EE1 /* MiLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45968311D4657AD00FF9EE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A459683C1D4657AD00FF9EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		A45968411D4657AD00FF9EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		A45968461D4657AD00FF9EE1 /* MiLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A459684A1D4657AD00FF9EE1 /* MiLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiLinkTests.m; sourceTree = "<group>"; };
+		A459684C1D4657AD00FF9EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45968511D4657AD00FF9EE1 /* MiLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45968551D4657AD00FF9EE1 /* MiLinkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiLinkUITests.m; sourceTree = "<group>"; };
+		A45968571D4657AD00FF9EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45968641D465C0300FF9EE1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A45968651D465C0300FF9EE1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A45969CB1D4666F700FF9EE1 /* GeneralDeveloperKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeneralDeveloperKit.framework; sourceTree = "<group>"; };
+		A45969D01D46680A00FF9EE1 /* MiLinkLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginController.h; sourceTree = "<group>"; };
+		A45969D11D46680A00FF9EE1 /* MiLinkLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginController.m; sourceTree = "<group>"; };
+		A45969D91D46680A00FF9EE1 /* MiLinkLoginViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginViewManager.h; sourceTree = "<group>"; };
+		A45969DA1D46680A00FF9EE1 /* MiLinkLoginViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginViewManager.m; sourceTree = "<group>"; };
+		A45969E01D46682A00FF9EE1 /* MiLinkPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiLinkPrefixHeader.pch; sourceTree = "<group>"; };
+		A48FDF8F1D475D01004F92C4 /* MiLinkHTTPAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiLinkHTTPAddress.h; sourceTree = "<group>"; };
+		A48FDF911D4760BB004F92C4 /* MiLinkLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginModel.h; sourceTree = "<group>"; };
+		A48FDF921D4760BB004F92C4 /* MiLinkLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginModel.m; sourceTree = "<group>"; };
+		A48FDF951D4760E7004F92C4 /* MiLinkUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkUserInfoModel.h; sourceTree = "<group>"; };
+		A48FDF961D4760E7004F92C4 /* MiLinkUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkUserInfoModel.m; sourceTree = "<group>"; };
+		A48FDF991D47619B004F92C4 /* UserDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataModel.h; sourceTree = "<group>"; };
+		A48FDF9A1D47619B004F92C4 /* UserDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataModel.m; sourceTree = "<group>"; };
+		A4C153E01D48B0F700A87DF3 /* MiLinkRTMPTarBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPTarBar.h; sourceTree = "<group>"; };
+		A4C153E11D48B0F700A87DF3 /* MiLinkRTMPTarBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkRTMPTarBar.m; sourceTree = "<group>"; };
+		A4C643C91D47A7EF00F25B57 /* MiLinkRTMPController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPController.h; sourceTree = "<group>"; };
+		A4C643CA1D47A7EF00F25B57 /* MiLinkRTMPController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkRTMPController.m; sourceTree = "<group>"; };
+		A4C643CC1D47C70600F25B57 /* MiLinkRTMPNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPNavigationBar.h; sourceTree = "<group>"; };
+		A4C643CD1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkRTMPNavigationBar.m; sourceTree = "<group>"; };
+		A4C643CF1D48418300F25B57 /* MiLinkRTMPViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPViewManager.h; sourceTree = "<group>"; };
+		A4C643D01D48418300F25B57 /* MiLinkRTMPViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkRTMPViewManager.m; sourceTree = "<group>"; };
+		A4C643D21D486CA500F25B57 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4EFA8AD1D489FBB00B5199B /* MiLinkDemonstrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkDemonstrationView.h; sourceTree = "<group>"; };
+		A4EFA8AE1D489FBB00B5199B /* MiLinkDemonstrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkDemonstrationView.m; sourceTree = "<group>"; };
+		A4EFA8B01D489FBB00B5199B /* MiLinkLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginView.h; sourceTree = "<group>"; };
+		A4EFA8B11D489FBB00B5199B /* MiLinkLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A459682A1D4657AC00FF9EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4109AF21D49A86900109E87 /* CoreMedia.framework in Frameworks */,
+				A4109AF01D49A86400109E87 /* AVFoundation.framework in Frameworks */,
+				A4109AEE1D49A85A00109E87 /* AudioToolbox.framework in Frameworks */,
+				A4109AEC1D49A84E00109E87 /* SystemConfiguration.framework in Frameworks */,
+				A4109AEA1D49A84300109E87 /* VideoToolbox.framework in Frameworks */,
+				A4109AE81D49A83900109E87 /* libz.tbd in Frameworks */,
+				A45969CC1D4666F700FF9EE1 /* GeneralDeveloperKit.framework in Frameworks */,
+				A4109AE61D49A82000109E87 /* libNodeMediaClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45968431D4657AD00FF9EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A459684E1D4657AD00FF9EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A45968241D4657AC00FF9EE1 = {
+			isa = PBXGroup;
+			children = (
+				A459682F1D4657AD00FF9EE1 /* MiLink */,
+				A45968491D4657AD00FF9EE1 /* MiLinkTests */,
+				A45968541D4657AD00FF9EE1 /* MiLinkUITests */,
+				A459682E1D4657AC00FF9EE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A459682E1D4657AC00FF9EE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A459682D1D4657AC00FF9EE1 /* MiLink.app */,
+				A45968461D4657AD00FF9EE1 /* MiLinkTests.xctest */,
+				A45968511D4657AD00FF9EE1 /* MiLinkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A459682F1D4657AD00FF9EE1 /* MiLink */ = {
+			isa = PBXGroup;
+			children = (
+				A45968631D465C0300FF9EE1 /* AppDelegate */,
+				A45969CA1D4666F700FF9EE1 /* Framework */,
+				A45969CD1D46680A00FF9EE1 /* MiLinkModular */,
+				A45969DF1D46681400FF9EE1 /* Resources */,
+			);
+			path = MiLink;
+			sourceTree = "<group>";
+		};
+		A45968301D4657AD00FF9EE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A45968311D4657AD00FF9EE1 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A45968491D4657AD00FF9EE1 /* MiLinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				A459684A1D4657AD00FF9EE1 /* MiLinkTests.m */,
+				A459684C1D4657AD00FF9EE1 /* Info.plist */,
+			);
+			path = MiLinkTests;
+			sourceTree = "<group>";
+		};
+		A45968541D4657AD00FF9EE1 /* MiLinkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A45968551D4657AD00FF9EE1 /* MiLinkUITests.m */,
+				A45968571D4657AD00FF9EE1 /* Info.plist */,
+			);
+			path = MiLinkUITests;
+			sourceTree = "<group>";
+		};
+		A45968631D465C0300FF9EE1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A45968641D465C0300FF9EE1 /* AppDelegate.h */,
+				A45968651D465C0300FF9EE1 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A45969CA1D4666F700FF9EE1 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A4109AF11D49A86900109E87 /* CoreMedia.framework */,
+				A4109AEF1D49A86400109E87 /* AVFoundation.framework */,
+				A4109AED1D49A85A00109E87 /* AudioToolbox.framework */,
+				A4109AEB1D49A84E00109E87 /* SystemConfiguration.framework */,
+				A4109AE91D49A84300109E87 /* VideoToolbox.framework */,
+				A4109AE71D49A83900109E87 /* libz.tbd */,
+				A4109AE31D49A82000109E87 /* libNodeMediaClient.a */,
+				A4109AE41D49A82000109E87 /* LivePlayer.h */,
+				A4109AE51D49A82000109E87 /* LivePublisher.h */,
+				A45969CB1D4666F700FF9EE1 /* GeneralDeveloperKit.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		A45969CD1D46680A00FF9EE1 /* MiLinkModular */ = {
+			isa = PBXGroup;
+			children = (
+				A45969CE1D46680A00FF9EE1 /* MiLinkLogin */,
+				A4C643C21D47A7DC00F25B57 /* MiLinkRTMP */,
+			);
+			path = MiLinkModular;
+			sourceTree = "<group>";
+		};
+		A45969CE1D46680A00FF9EE1 /* MiLinkLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A45969CF1D46680A00FF9EE1 /* Controller */,
+				A45969D21D46680A00FF9EE1 /* Model */,
+				A45969D81D46680A00FF9EE1 /* ViewManager */,
+				A4EFA8AB1D489FBB00B5199B /* Views */,
+			);
+			path = MiLinkLogin;
+			sourceTree = "<group>";
+		};
+		A45969CF1D46680A00FF9EE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A45969D01D46680A00FF9EE1 /* MiLinkLoginController.h */,
+				A45969D11D46680A00FF9EE1 /* MiLinkLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A45969D21D46680A00FF9EE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A48FDF901D4760BB004F92C4 /* LoginModel */,
+				A48FDF981D476195004F92C4 /* UserDataModel */,
+				A48FDF931D4760BB004F92C4 /* UserInfoModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A45969D81D46680A00FF9EE1 /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				A45969D91D46680A00FF9EE1 /* MiLinkLoginViewManager.h */,
+				A45969DA1D46680A00FF9EE1 /* MiLinkLoginViewManager.m */,
+			);
+			path = ViewManager;
+			sourceTree = "<group>";
+		};
+		A45969DF1D46681400FF9EE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A45968301D4657AD00FF9EE1 /* Supporting Files */,
+				A45968411D4657AD00FF9EE1 /* Info.plist */,
+				A459683C1D4657AD00FF9EE1 /* Assets.xcassets */,
+				A45969E01D46682A00FF9EE1 /* MiLinkPrefixHeader.pch */,
+				A48FDF8F1D475D01004F92C4 /* MiLinkHTTPAddress.h */,
+				A4C643D21D486CA500F25B57 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A48FDF901D4760BB004F92C4 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				A48FDF911D4760BB004F92C4 /* MiLinkLoginModel.h */,
+				A48FDF921D4760BB004F92C4 /* MiLinkLoginModel.m */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		A48FDF931D4760BB004F92C4 /* UserInfoModel */ = {
+			isa = PBXGroup;
+			children = (
+				A48FDF951D4760E7004F92C4 /* MiLinkUserInfoModel.h */,
+				A48FDF961D4760E7004F92C4 /* MiLinkUserInfoModel.m */,
+			);
+			path = UserInfoModel;
+			sourceTree = "<group>";
+		};
+		A48FDF981D476195004F92C4 /* UserDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A48FDF991D47619B004F92C4 /* UserDataModel.h */,
+				A48FDF9A1D47619B004F92C4 /* UserDataModel.m */,
+			);
+			path = UserDataModel;
+			sourceTree = "<group>";
+		};
+		A4C643C21D47A7DC00F25B57 /* MiLinkRTMP */ = {
+			isa = PBXGroup;
+			children = (
+				A4C643C31D47A7DC00F25B57 /* Controller */,
+				A4C643C41D47A7DC00F25B57 /* Model */,
+				A4C643C51D47A7DC00F25B57 /* ViewManager */,
+				A4C643C61D47A7DC00F25B57 /* Views */,
+			);
+			path = MiLinkRTMP;
+			sourceTree = "<group>";
+		};
+		A4C643C31D47A7DC00F25B57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4C643C91D47A7EF00F25B57 /* MiLinkRTMPController.h */,
+				A4C643CA1D47A7EF00F25B57 /* MiLinkRTMPController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4C643C41D47A7DC00F25B57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4C643C51D47A7DC00F25B57 /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4C643CF1D48418300F25B57 /* MiLinkRTMPViewManager.h */,
+				A4C643D01D48418300F25B57 /* MiLinkRTMPViewManager.m */,
+			);
+			path = ViewManager;
+			sourceTree = "<group>";
+		};
+		A4C643C61D47A7DC00F25B57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4C643C71D47A7DC00F25B57 /* NavigationBar */,
+				A4C643C81D47A7DC00F25B57 /* TarBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4C643C71D47A7DC00F25B57 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4C643CC1D47C70600F25B57 /* MiLinkRTMPNavigationBar.h */,
+				A4C643CD1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		A4C643C81D47A7DC00F25B57 /* TarBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4C153E01D48B0F700A87DF3 /* MiLinkRTMPTarBar.h */,
+				A4C153E11D48B0F700A87DF3 /* MiLinkRTMPTarBar.m */,
+			);
+			path = TarBar;
+			sourceTree = "<group>";
+		};
+		A4EFA8AB1D489FBB00B5199B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4EFA8AC1D489FBB00B5199B /* DemonstrationView */,
+				A4EFA8AF1D489FBB00B5199B /* LoginView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4EFA8AC1D489FBB00B5199B /* DemonstrationView */ = {
+			isa = PBXGroup;
+			children = (
+				A4EFA8AD1D489FBB00B5199B /* MiLinkDemonstrationView.h */,
+				A4EFA8AE1D489FBB00B5199B /* MiLinkDemonstrationView.m */,
+			);
+			path = DemonstrationView;
+			sourceTree = "<group>";
+		};
+		A4EFA8AF1D489FBB00B5199B /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				A4EFA8B01D489FBB00B5199B /* MiLinkLoginView.h */,
+				A4EFA8B11D489FBB00B5199B /* MiLinkLoginView.m */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A459682C1D4657AC00FF9EE1 /* MiLink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A459685A1D4657AD00FF9EE1 /* Build configuration list for PBXNativeTarget "MiLink" */;
+			buildPhases = (
+				A45968291D4657AC00FF9EE1 /* Sources */,
+				A459682A1D4657AC00FF9EE1 /* Frameworks */,
+				A459682B1D4657AC00FF9EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiLink;
+			productName = MiLink;
+			productReference = A459682D1D4657AC00FF9EE1 /* MiLink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A45968451D4657AD00FF9EE1 /* MiLinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A459685D1D4657AD00FF9EE1 /* Build configuration list for PBXNativeTarget "MiLinkTests" */;
+			buildPhases = (
+				A45968421D4657AD00FF9EE1 /* Sources */,
+				A45968431D4657AD00FF9EE1 /* Frameworks */,
+				A45968441D4657AD00FF9EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A45968481D4657AD00FF9EE1 /* PBXTargetDependency */,
+			);
+			name = MiLinkTests;
+			productName = MiLinkTests;
+			productReference = A45968461D4657AD00FF9EE1 /* MiLinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A45968501D4657AD00FF9EE1 /* MiLinkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A45968601D4657AD00FF9EE1 /* Build configuration list for PBXNativeTarget "MiLinkUITests" */;
+			buildPhases = (
+				A459684D1D4657AD00FF9EE1 /* Sources */,
+				A459684E1D4657AD00FF9EE1 /* Frameworks */,
+				A459684F1D4657AD00FF9EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A45968531D4657AD00FF9EE1 /* PBXTargetDependency */,
+			);
+			name = MiLinkUITests;
+			productName = MiLinkUITests;
+			productReference = A45968511D4657AD00FF9EE1 /* MiLinkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A45968251D4657AC00FF9EE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Cain;
+				TargetAttributes = {
+					A459682C1D4657AC00FF9EE1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M67UHY3N8U;
+					};
+					A45968451D4657AD00FF9EE1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M67UHY3N8U;
+						TestTargetID = A459682C1D4657AC00FF9EE1;
+					};
+					A45968501D4657AD00FF9EE1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M67UHY3N8U;
+						TestTargetID = A459682C1D4657AC00FF9EE1;
+					};
+				};
+			};
+			buildConfigurationList = A45968281D4657AC00FF9EE1 /* Build configuration list for PBXProject "MiLink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A45968241D4657AC00FF9EE1;
+			productRefGroup = A459682E1D4657AC00FF9EE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A459682C1D4657AC00FF9EE1 /* MiLink */,
+				A45968451D4657AD00FF9EE1 /* MiLinkTests */,
+				A45968501D4657AD00FF9EE1 /* MiLinkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A459682B1D4657AC00FF9EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A459683D1D4657AD00FF9EE1 /* Assets.xcassets in Resources */,
+				A4C643D31D486CA500F25B57 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45968441D4657AD00FF9EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A459684F1D4657AD00FF9EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A45968291D4657AC00FF9EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A48FDF971D4760E7004F92C4 /* MiLinkUserInfoModel.m in Sources */,
+				A4C153E21D48B0F700A87DF3 /* MiLinkRTMPTarBar.m in Sources */,
+				A45969DE1D46680A00FF9EE1 /* MiLinkLoginViewManager.m in Sources */,
+				A4C643CB1D47A7EF00F25B57 /* MiLinkRTMPController.m in Sources */,
+				A45968671D465C0300FF9EE1 /* AppDelegate.m in Sources */,
+				A4EFA8B21D489FBB00B5199B /* MiLinkDemonstrationView.m in Sources */,
+				A48FDF941D4760BB004F92C4 /* MiLinkLoginModel.m in Sources */,
+				A4C643D11D48418300F25B57 /* MiLinkRTMPViewManager.m in Sources */,
+				A4C643CE1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m in Sources */,
+				A45968321D4657AD00FF9EE1 /* main.m in Sources */,
+				A48FDF9B1D47619B004F92C4 /* UserDataModel.m in Sources */,
+				A45969DB1D46680A00FF9EE1 /* MiLinkLoginController.m in Sources */,
+				A4EFA8B31D489FBB00B5199B /* MiLinkLoginView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45968421D4657AD00FF9EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A459684B1D4657AD00FF9EE1 /* MiLinkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A459684D1D4657AD00FF9EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45968561D4657AD00FF9EE1 /* MiLinkUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A45968481D4657AD00FF9EE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A459682C1D4657AC00FF9EE1 /* MiLink */;
+			targetProxy = A45968471D4657AD00FF9EE1 /* PBXContainerItemProxy */;
+		};
+		A45968531D4657AD00FF9EE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A459682C1D4657AC00FF9EE1 /* MiLink */;
+			targetProxy = A45968521D4657AD00FF9EE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A45968581D4657AD00FF9EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A45968591D4657AD00FF9EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A459685B1D4657AD00FF9EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiLink/Framework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MiLink/Resources/MiLinkPrefixHeader.pch";
+				INFOPLIST_FILE = MiLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiLink/Framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkDevelopment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "be0ae443-cd77-4106-9f87-096b8e109338";
+			};
+			name = Debug;
+		};
+		A459685C1D4657AD00FF9EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiLink/Framework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MiLink/Resources/MiLinkPrefixHeader.pch";
+				INFOPLIST_FILE = MiLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiLink/Framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkDevelopment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "be0ae443-cd77-4106-9f87-096b8e109338";
+			};
+			name = Release;
+		};
+		A459685E1D4657AD00FF9EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MiLinkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiLink.app/MiLink";
+			};
+			name = Debug;
+		};
+		A459685F1D4657AD00FF9EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MiLinkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiLink.app/MiLink";
+			};
+			name = Release;
+		};
+		A45968611D4657AD00FF9EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MiLinkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiLink;
+			};
+			name = Debug;
+		};
+		A45968621D4657AD00FF9EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MiLinkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiLink;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A45968281D4657AC00FF9EE1 /* Build configuration list for PBXProject "MiLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45968581D4657AD00FF9EE1 /* Debug */,
+				A45968591D4657AD00FF9EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A459685A1D4657AD00FF9EE1 /* Build configuration list for PBXNativeTarget "MiLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A459685B1D4657AD00FF9EE1 /* Debug */,
+				A459685C1D4657AD00FF9EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A459685D1D4657AD00FF9EE1 /* Build configuration list for PBXNativeTarget "MiLinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A459685E1D4657AD00FF9EE1 /* Debug */,
+				A459685F1D4657AD00FF9EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A45968601D4657AD00FF9EE1 /* Build configuration list for PBXNativeTarget "MiLinkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45968611D4657AD00FF9EE1 /* Debug */,
+				A45968621D4657AD00FF9EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A45968251D4657AC00FF9EE1 /* Project object */;
+}

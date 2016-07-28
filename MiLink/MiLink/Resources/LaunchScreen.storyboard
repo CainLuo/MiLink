@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hss-ap-hY5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="GMn-Uc-p5R">
+            <objects>
+                <viewController id="hss-ap-hY5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YkT-63-dtv"/>
+                        <viewControllerLayoutGuide type="bottom" id="rYJ-pa-RJt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QGP-oJ-hDL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_launch" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-Bg-02e">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TA2-Bg-02e" secondAttribute="trailing" id="VWJ-Y7-7D8"/>
+                            <constraint firstItem="TA2-Bg-02e" firstAttribute="leading" secondItem="QGP-oJ-hDL" secondAttribute="leading" id="ajk-s1-ouV"/>
+                            <constraint firstItem="rYJ-pa-RJt" firstAttribute="top" secondItem="TA2-Bg-02e" secondAttribute="bottom" id="fIW-9X-9mN"/>
+                            <constraint firstItem="TA2-Bg-02e" firstAttribute="top" secondItem="QGP-oJ-hDL" secondAttribute="top" id="ttX-KF-iKw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wM-Lw-1i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="333"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_launch" width="360" height="640"/>
+    </resources>
+</document>

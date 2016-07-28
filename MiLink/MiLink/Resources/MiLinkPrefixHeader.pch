@@ -1,0 +1,26 @@
+//
+//  MiLinkPrefixHeader.pch
+//  MiLink
+//
+//  Created by Cain on 25/7/16.
+//  Copyright © 2016年 Cain. All rights reserved.
+//
+
+#ifndef MiLinkPrefixHeader_pch
+#define MiLinkPrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <GeneralDeveloperKit/Masonry.h>
+#import <GeneralDeveloperKit/YYModel.h>
+#import <GeneralDeveloperKit/AFNetworking.h>
+#import <GeneralDeveloperKit/GeneralDefine.h>
+#import <GeneralDeveloperKit/UIView+Extension.h>
+#import <GeneralDeveloperKit/IQKeyboardManager.h>
+
+#import "MiLinkHTTPAddress.h"
+#import "AppDelegate.h"
+
+#import "LivePublisher.h"
+#import "LivePlayer.h"
+
+#endif
