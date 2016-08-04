@@ -10,12 +10,8 @@
 #define MiLinkPrefixHeader_pch
 
 #import <UIKit/UIKit.h>
-#import <GeneralDeveloperKit/Masonry.h>
-#import <GeneralDeveloperKit/YYModel.h>
-#import <GeneralDeveloperKit/AFNetworking.h>
-#import <GeneralDeveloperKit/GeneralDefine.h>
-#import <GeneralDeveloperKit/UIView+Extension.h>
-#import <GeneralDeveloperKit/IQKeyboardManager.h>
+
+#import <CALDeveloperKit/CALDeveloperKit.h>
 
 #import "MiLinkHTTPAddress.h"
 #import "AppDelegate.h"

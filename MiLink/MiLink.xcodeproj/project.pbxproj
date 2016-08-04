@@ -14,12 +14,12 @@
 		A4109AEE1D49A85A00109E87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AED1D49A85A00109E87 /* AudioToolbox.framework */; };
 		A4109AF01D49A86400109E87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AEF1D49A86400109E87 /* AVFoundation.framework */; };
 		A4109AF21D49A86900109E87 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4109AF11D49A86900109E87 /* CoreMedia.framework */; };
+		A41ED4F51D51D0F70081C6EA /* CALDeveloperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41ED4F41D51D0F70081C6EA /* CALDeveloperKit.framework */; };
 		A45968321D4657AD00FF9EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968311D4657AD00FF9EE1 /* main.m */; };
 		A459683D1D4657AD00FF9EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A459683C1D4657AD00FF9EE1 /* Assets.xcassets */; };
 		A459684B1D4657AD00FF9EE1 /* MiLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A459684A1D4657AD00FF9EE1 /* MiLinkTests.m */; };
 		A45968561D4657AD00FF9EE1 /* MiLinkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968551D4657AD00FF9EE1 /* MiLinkUITests.m */; };
 		A45968671D465C0300FF9EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968651D465C0300FF9EE1 /* AppDelegate.m */; };
-		A45969CC1D4666F700FF9EE1 /* GeneralDeveloperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45969CB1D4666F700FF9EE1 /* GeneralDeveloperKit.framework */; };
 		A45969DB1D46680A00FF9EE1 /* MiLinkLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45969D11D46680A00FF9EE1 /* MiLinkLoginController.m */; };
 		A45969DE1D46680A00FF9EE1 /* MiLinkLoginViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A45969DA1D46680A00FF9EE1 /* MiLinkLoginViewManager.m */; };
 		A48FDF941D4760BB004F92C4 /* MiLinkLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF921D4760BB004F92C4 /* MiLinkLoginModel.m */; };
@@ -61,6 +61,7 @@
 		A4109AED1D49A85A00109E87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A4109AEF1D49A86400109E87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A4109AF11D49A86900109E87 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A41ED4F41D51D0F70081C6EA /* CALDeveloperKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CALDeveloperKit.framework; sourceTree = "<group>"; };
 		A459682D1D4657AC00FF9EE1 /* MiLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45968311D4657AD00FF9EE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A459683C1D4657AD00FF9EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		A45968571D4657AD00FF9EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A45968641D465C0300FF9EE1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A45968651D465C0300FF9EE1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A45969CB1D4666F700FF9EE1 /* GeneralDeveloperKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeneralDeveloperKit.framework; sourceTree = "<group>"; };
 		A45969D01D46680A00FF9EE1 /* MiLinkLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginController.h; sourceTree = "<group>"; };
 		A45969D11D46680A00FF9EE1 /* MiLinkLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginController.m; sourceTree = "<group>"; };
 		A45969D91D46680A00FF9EE1 /* MiLinkLoginViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginViewManager.h; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				A4109AEC1D49A84E00109E87 /* SystemConfiguration.framework in Frameworks */,
 				A4109AEA1D49A84300109E87 /* VideoToolbox.framework in Frameworks */,
 				A4109AE81D49A83900109E87 /* libz.tbd in Frameworks */,
-				A45969CC1D4666F700FF9EE1 /* GeneralDeveloperKit.framework in Frameworks */,
+				A41ED4F51D51D0F70081C6EA /* CALDeveloperKit.framework in Frameworks */,
 				A4109AE61D49A82000109E87 /* libNodeMediaClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +204,7 @@
 		A45969CA1D4666F700FF9EE1 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				A41ED4F41D51D0F70081C6EA /* CALDeveloperKit.framework */,
 				A4109AF11D49A86900109E87 /* CoreMedia.framework */,
 				A4109AEF1D49A86400109E87 /* AVFoundation.framework */,
 				A4109AED1D49A85A00109E87 /* AudioToolbox.framework */,
@@ -213,7 +214,6 @@
 				A4109AE31D49A82000109E87 /* libNodeMediaClient.a */,
 				A4109AE41D49A82000109E87 /* LivePlayer.h */,
 				A4109AE51D49A82000109E87 /* LivePublisher.h */,
-				A45969CB1D4666F700FF9EE1 /* GeneralDeveloperKit.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";

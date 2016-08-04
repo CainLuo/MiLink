@@ -15,7 +15,6 @@
 @property (nonatomic, strong) UIImageView *logoImageView;
 @property (nonatomic, strong) UIButton    *loginButton;
 
-
 @end
 
 @implementation MiLinkLoginView
@@ -75,7 +74,6 @@
     _logoImageView = [[UIImageView alloc] init];
     
     _logoImageView.image       = [UIImage imageNamed:@"icon_logo"];
-//    _logoImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     return _logoImageView;
 }
@@ -99,11 +97,16 @@
 
     _accountTextField.leftViewMode = UITextFieldViewModeAlways;
     _accountTextField.leftView = leftImageView;
-    
     _accountTextField.keyboardType = UIKeyboardTypeASCIICapable;
     _accountTextField.returnKeyType = UIReturnKeyNext;
+    _accountTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     _accountTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     _accountTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userName"]) {
+        
+        _accountTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
+    }
 
     return _accountTextField;
 }
@@ -130,6 +133,7 @@
     
     _passwordTextField.secureTextEntry = YES;
     _passwordTextField.keyboardType = UIKeyboardTypeAlphabet;
+    _passwordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     _passwordTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     _passwordTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 

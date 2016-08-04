@@ -11,7 +11,7 @@
 
 @interface MiLinkRTMPViewManager()
 
-@property (nonatomic, strong) MiLinkRTMPController    *miLinkRTMPController;
+@property (nonatomic, strong) MiLinkRTMPController *miLinkRTMPController;
 
 @end
 

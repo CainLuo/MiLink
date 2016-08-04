@@ -12,6 +12,8 @@
 
 + (AppDelegate *)userInfoAppDelegate;
 
+@property (nonatomic, copy) NSString *pushURL;
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end

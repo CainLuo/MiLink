@@ -107,5 +107,9 @@
     }
 }
 
+- (void)setTitleString:(NSString *)titleString {
+    
+    self.titleLabel.text = titleString;
+}
 
 @end

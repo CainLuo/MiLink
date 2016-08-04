@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) MiLinkRTMPViewManager *miLinkRTMPViewManager;
 @property (nonatomic, strong) LivePublisher         *livePublisher;
+@property (nonatomic, strong) MBProgressHUD         *progressHUD;
 
 @end
 
@@ -68,15 +69,28 @@
 }
 
 #pragma mark - Set Screen
-- (BOOL)shouldAutorotate {
-    return YES;
-}
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration {
+    
+    [self.livePublisher setCameraOrientation:toInterfaceOrientation];
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-
-    [_livePublisher setCameraOrientation:VIDEO_ORI_LANDSCAPE_REVERSE];
-
-    return UIInterfaceOrientationMaskLandscapeRight;
+    switch (toInterfaceOrientation) {
+        case UIInterfaceOrientationPortrait:
+            [self.livePublisher setVideoOrientation:VIDEO_ORI_PORTRAIT];
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            [self.livePublisher setVideoOrientation:VIDEO_ORI_PORTRAIT_REVERSE];
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            [self.livePublisher setVideoOrientation:VIDEO_ORI_LANDSCAPE_REVERSE];
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            [self.livePublisher setVideoOrientation:VIDEO_ORI_LANDSCAPE];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - Init MiLink RTMP View Manager
@@ -124,6 +138,42 @@
     }];
     
     [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkRecordingBlock:^(UIButton *sender) {
+        
+        if (sender.tag == 0) {
+            
+            weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = NO;
+            
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [weakSelf.livePublisher startPublish:RTMP_PUSH_URL];
+                });
+            });
+            
+            weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 开始连接";
+
+            [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
+                                                                         forState:UIControlStateNormal];
+
+            sender.tag = 1;
+        } else {
+            
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [weakSelf.livePublisher stopPublish];
+                });
+            });
+            
+            [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
+                                                                         forState:UIControlStateNormal];
+            
+            weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = YES;
+
+            sender.tag = 0;
+        }
     }];
     
     [self.miLinkRTMPViewManager.miLinkRTMPTarBar setMiLinkPhotoFlashBlock:^(UIButton *sender) {
@@ -170,6 +220,8 @@
     
     [self.miLinkRTMPViewManager.miLinkNavigationBar setMiLinkSwitchFrameRateButtonBlock:^(UIButton *sender) {
         
+        [weakSelf.progressHUD showAnimated:YES];
+        
         if (sender.tag == 0) {
             
             [sender setTitle:@"标清"
@@ -177,28 +229,43 @@
             
             sender.tag = 1;
             
-            [weakSelf.livePublisher setVideoParamWidth:640
-                                                height:360
-                                                   fps:15
-                                               bitrate:500 * 1000
-                                            avcProfile:AVC_PROFILE_MAIN];
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [weakSelf.livePublisher setVideoParamWidth:640
+                                                        height:360
+                                                           fps:15
+                                                       bitrate:500 * 1000
+                                                    avcProfile:AVC_PROFILE_MAIN];
+                });
+            });
+
         } else {
 
             [sender setTitle:@"高清"
                     forState:UIControlStateNormal];
 
             sender.tag = 0;
-
-            [weakSelf.livePublisher setVideoParamWidth:1280
-                                                height:720
-                                                   fps:15
-                                               bitrate:500 * 1000
-                                            avcProfile:AVC_PROFILE_HIGH];
+            
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [weakSelf.livePublisher setVideoParamWidth:1280
+                                                        height:720
+                                                           fps:15
+                                                       bitrate:500 * 1000
+                                                    avcProfile:AVC_PROFILE_HIGH];
+                });
+            });
         }
     }];
 }
 
 - (void)onEventCallback:(int)event msg:(NSString *)msg {
+    
+    NSLog(@"Event: %d, message: %@", event, msg);
     
     CAL_WEAK_SELF(weakSelf);
     
@@ -209,55 +276,44 @@
                 
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 开始连接";
                 
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
-                                                                             forState:UIControlStateNormal];
                 break;
             case 2001: {
                 //发布流连接成功 开始发布
                 
-                self.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
-                
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
-                                                                             forState:UIControlStateNormal];
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
             }
                 break;
             case 2002:
                 //发布流连接失败
                 
-                self.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
                 
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
-                                                                             forState:UIControlStateNormal];
                 break;
             case 2004:
                 //停止发布
                 
-                self.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 未连接";
+                [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
+                                                                                 forState:UIControlStateNormal];
+
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 未连接";
                 
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
-                                                                             forState:UIControlStateNormal];
-                
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = YES;
+
                 break;
             case 2005:
                 //发布中遇到网络异常
                 
-                self.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
-                
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
-                                                                             forState:UIControlStateNormal];
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
 
                 break;
             case 2100:
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 等待连接";
-                
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
-                                                                             forState:UIControlStateNormal];
 
                 break;
             case 2101:
-                self.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
-                [self.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
-                                                                             forState:UIControlStateNormal];
+
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
+                
                 break;
             default:
                 break;
@@ -286,6 +342,15 @@
                         }
                         
                     } completion:nil];
+}
+
+- (MBProgressHUD *)progressHUD {
+    
+    CAL_GET_METHOD_RETURN_OBJC(_progressHUD);
+    
+    _progressHUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    
+    return _progressHUD;
 }
 
 @end

@@ -38,9 +38,12 @@
                progress:nil
                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     
-                    MiLinkUserInfoModel *userInfo = [MiLinkUserInfoModel yy_modelWithJSON:responseObject];
+                    MiLinkUserInfoModel *userInfoModel = [MiLinkUserInfoModel yy_modelWithJSON:responseObject];
                     
-                    self.loginController.pushUrl = userInfo.data.pushUrl;
+                    [AppDelegate userInfoAppDelegate].pushURL = userInfoModel.data.pushUrl;
+                    
+                    [[NSUserDefaults standardUserDefaults] setObject:[userInfo objectForKey:@"username"]
+                                                              forKey:@"userName"];
                     
                     [self.loginController.loginViewManager reloadLoginView:YES];
         

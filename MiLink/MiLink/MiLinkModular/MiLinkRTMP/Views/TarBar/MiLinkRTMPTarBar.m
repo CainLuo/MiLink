@@ -43,14 +43,14 @@
     [self.microphoneButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         (void)make.centerY;
-        make.left.equalTo(self).offset(CAL_WIDTH_TO_FIT(50));
+        make.left.equalTo(self.mas_left).offset(CAL_WIDTH_TO_FIT(20));
         make.height.width.equalTo(self.mas_height);
     }];
     
     [self.changeCameraButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         (void)make.centerY;
-        make.left.equalTo(self.microphoneButton.mas_right).offset(CAL_WIDTH_TO_FIT(50));
+        make.left.equalTo(self.microphoneButton.mas_right).offset(CAL_WIDTH_TO_FIT(20));
         make.height.width.equalTo(self.mas_height);
     }];
 
@@ -63,14 +63,14 @@
     [self.photoFlashButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         (void)make.centerY;
-        make.right.equalTo(self.screenshotsButton.mas_left).offset(CAL_WIDTH_TO_FIT(-50));
+        make.right.equalTo(self.screenshotsButton.mas_left).offset(CAL_WIDTH_TO_FIT(-20));
         make.height.width.equalTo(self.mas_height);
     }];
 
     [self.screenshotsButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         (void)make.centerY;
-        make.right.equalTo(self).offset(CAL_WIDTH_TO_FIT(-50));
+        make.right.equalTo(self).offset(CAL_WIDTH_TO_FIT(-20));
         make.height.width.equalTo(self.mas_height);
     }];
 }
@@ -81,7 +81,7 @@
     CAL_GET_METHOD_RETURN_OBJC(_microphoneButton);
     
     _microphoneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+
     [_microphoneButton setImage:[UIImage imageNamed:@"icon_microphone_on"]
                        forState:UIControlStateNormal];
     
@@ -105,7 +105,7 @@
     CAL_GET_METHOD_RETURN_OBJC(_changeCameraButton);
     
     _changeCameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+
     [_changeCameraButton setImage:[UIImage imageNamed:@"icon_camera_change"]
                          forState:UIControlStateNormal];
     
@@ -129,7 +129,7 @@
     CAL_GET_METHOD_RETURN_OBJC(_recordingButton);
     
     _recordingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+
     [_recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
                       forState:UIControlStateNormal];
     
@@ -159,7 +159,7 @@
     CAL_GET_METHOD_RETURN_OBJC(_photoFlashButton);
     
     _photoFlashButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+
     [_photoFlashButton setImage:[UIImage imageNamed:@"icon_flash_off"]
                        forState:UIControlStateNormal];
     
@@ -183,7 +183,7 @@
     CAL_GET_METHOD_RETURN_OBJC(_screenshotsButton);
     
     _screenshotsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+
     [_screenshotsButton setImage:[UIImage imageNamed:@"icon_camera_on"]
                         forState:UIControlStateNormal];
     

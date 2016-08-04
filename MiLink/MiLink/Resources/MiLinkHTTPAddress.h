@@ -11,4 +11,6 @@
 
 #define LOGIN_ADDRESS @"http://www.wx1wx.com/api/ios_login.php"
 
+#define RTMP_PUSH_URL [AppDelegate userInfoAppDelegate].pushURL
+
 #endif /* MiLinkHTTPAddress_h */
