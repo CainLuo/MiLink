@@ -36,7 +36,8 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.miLinkRTMPViewManager reloadViewManager];
@@ -267,8 +268,6 @@
 
 - (void)onEventCallback:(int)event msg:(NSString *)msg {
     
-    NSLog(@"Event: %d, message: %@", event, msg);
-    
     CAL_WEAK_SELF(weakSelf);
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -277,19 +276,16 @@
                 //发布流开始连接
                 
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 开始连接";
-                
                 break;
-            case 2001: {
+            case 2001:
                 //发布流连接成功 开始发布
                 
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
-            }
                 break;
             case 2002:
                 //发布流连接失败
                 
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
-                
                 break;
             case 2004:
                 //停止发布
@@ -300,22 +296,24 @@
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 未连接";
                 
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = YES;
-
                 break;
             case 2005:
                 //发布中遇到网络异常
-                
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
-
-                break;
             case 2100:
-                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 等待连接";
-
+                //发布端网络阻塞，已缓冲了2秒的数据在队列中
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 网络异常, 请稍等片刻";
+                break;
                 break;
             case 2101:
-
+                //发布端网络恢复畅通
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
-                
+                break;
+            case 2102:
+                //截图保存成功
+                break;
+            case 2103:
+                //截图保存失败
                 break;
             default:
                 break;
