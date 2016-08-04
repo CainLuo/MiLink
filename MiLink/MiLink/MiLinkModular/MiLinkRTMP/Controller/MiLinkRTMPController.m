@@ -42,6 +42,8 @@
     [self.miLinkRTMPViewManager reloadViewManager];
     [self viewManagerBlock];
     [self initLivePublisher];
+    
+    [self.livePublisher setCameraOrientation:VIDEO_ORI_LANDSCAPE_REVERSE];
 }
 
 #pragma mark - Init Live Publisher
@@ -73,14 +75,8 @@
                                 duration:(NSTimeInterval)duration {
     
     [self.livePublisher setCameraOrientation:toInterfaceOrientation];
-
+    
     switch (toInterfaceOrientation) {
-        case UIInterfaceOrientationPortrait:
-            [self.livePublisher setVideoOrientation:VIDEO_ORI_PORTRAIT];
-            break;
-        case UIInterfaceOrientationPortraitUpsideDown:
-            [self.livePublisher setVideoOrientation:VIDEO_ORI_PORTRAIT_REVERSE];
-            break;
         case UIInterfaceOrientationLandscapeLeft:
             [self.livePublisher setVideoOrientation:VIDEO_ORI_LANDSCAPE_REVERSE];
             break;
@@ -91,6 +87,12 @@
         default:
             break;
     }
+}
+
+#pragma mark - 设置屏幕只能竖屏
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 #pragma mark - Init MiLink RTMP View Manager

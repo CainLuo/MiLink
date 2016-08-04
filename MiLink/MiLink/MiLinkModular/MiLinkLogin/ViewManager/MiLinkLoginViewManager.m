@@ -52,7 +52,7 @@
         [self.demonstrationView setMiLinkDemonstrationBlock:^{
             
             MiLinkRTMPController *miLinkRTMPController = [[MiLinkRTMPController alloc] init];
-            
+                        
             [weakSelf.loginController presentViewController:miLinkRTMPController
                                                    animated:YES
                                                  completion:nil];
@@ -99,8 +99,6 @@
     
     _demonstrationView = [[MiLinkDemonstrationView alloc] init];
     
-    _demonstrationView.transform = CGAffineTransformMakeRotation(M_PI / 2);
-
     return _demonstrationView;
 }
 

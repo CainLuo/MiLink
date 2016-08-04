@@ -27,6 +27,8 @@
         [self addSubview:self.presentButton];
         
         [self addConstraints];
+        
+        self.transform = CGAffineTransformMakeRotation(M_PI / 2);
     }
     
     return self;
@@ -35,8 +37,7 @@
 - (void)addConstraints {
     
     [self.demonstrationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        (void)make.edges;
-
+        
         make.center.equalTo(self);
         
         make.height.mas_equalTo(CAL_SCREEN_WIDTH);

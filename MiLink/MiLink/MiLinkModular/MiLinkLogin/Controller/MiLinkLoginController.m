@@ -24,20 +24,18 @@
     [self.loginViewManager reloadLoginView: NO];
 }
 
-- (BOOL)shouldAutorotate {
-    
-    return YES;
-}
-
+#pragma mark - 设置屏幕只能竖屏
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
         
     return UIInterfaceOrientationMaskPortrait;
 }
 
+#pragma mark - 取消响应者事件
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
+#pragma mark - Init Login View Manager
 - (MiLinkLoginViewManager *)loginViewManager {
     
     CAL_GET_METHOD_RETURN_OBJC(_loginViewManager);
