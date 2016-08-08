@@ -130,7 +130,7 @@
     
     _recordingButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    [_recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
+    [_recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
                       forState:UIControlStateNormal];
     
     [_recordingButton addTarget:self

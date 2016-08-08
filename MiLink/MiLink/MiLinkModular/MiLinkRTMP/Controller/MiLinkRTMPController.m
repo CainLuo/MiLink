@@ -156,7 +156,7 @@
             
             weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 开始连接";
 
-            [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
+            [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
                                                                          forState:UIControlStateNormal];
 
             sender.tag = 1;
@@ -170,7 +170,7 @@
                 });
             });
             
-            [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
+            [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
                                                                          forState:UIControlStateNormal];
             
             weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = YES;
@@ -289,25 +289,30 @@
                 break;
             case 2004:
                 //停止发布
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 未连接";
                 
-                [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_start"]
+                [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
                                                                                  forState:UIControlStateNormal];
 
-                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 未连接";
+                weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton.tag = 0;
                 
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = YES;
                 break;
             case 2005:
                 //发布中遇到网络异常
                 weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 连接失败";
+                
+                [weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton setImage:[UIImage imageNamed:@"icon_video_stop"]
+                                                                                 forState:UIControlStateNormal];
+                
+                weakSelf.miLinkRTMPViewManager.miLinkRTMPTarBar.recordingButton.tag = 0;
+                
+                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.switchFrameRateButton.enabled = YES;
             case 2100:
                 //发布端网络阻塞，已缓冲了2秒的数据在队列中
-                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 网络异常, 请稍等片刻";
-                break;
                 break;
             case 2101:
                 //发布端网络恢复畅通
-                weakSelf.miLinkRTMPViewManager.miLinkNavigationBar.titleString = @"直播状态: 已连接";
                 break;
             case 2102:
                 //截图保存成功

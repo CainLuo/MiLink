@@ -41,6 +41,8 @@
                     MiLinkUserInfoModel *userInfoModel = [MiLinkUserInfoModel yy_modelWithJSON:responseObject];
                     
                     [AppDelegate userInfoAppDelegate].pushURL = userInfoModel.data.pushUrl;
+
+                    NSLog(@"%@", userInfoModel.data.pushUrl);
                     
                     [[NSUserDefaults standardUserDefaults] setObject:[userInfo objectForKey:@"username"]
                                                               forKey:@"userName"];
