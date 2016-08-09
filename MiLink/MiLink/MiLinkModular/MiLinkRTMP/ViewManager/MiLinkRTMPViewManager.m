@@ -60,10 +60,12 @@
     
     [_miLinkNavigationBar setMiLinkNavigationBackBlock:^{
 
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+//        [[UIApplication sharedApplication] setStatusBarHidden:YES];
 
-        [weakSelf.miLinkRTMPController dismissViewControllerAnimated:YES
-                                                          completion:nil];
+//        [weakSelf.miLinkRTMPController dismissViewControllerAnimated:YES
+//                                                          completion:nil];
+        
+        [weakSelf.miLinkRTMPController.navigationController popViewControllerAnimated:YES];
     }];
     
     return _miLinkNavigationBar;

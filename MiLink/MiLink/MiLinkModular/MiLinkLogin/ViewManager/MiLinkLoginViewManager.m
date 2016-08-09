@@ -12,6 +12,7 @@
 #import "MiLinkLoginModel.h"
 #import "MiLinkRTMPController.h"
 #import "MiLinkDemonstrationView.h"
+#import "MiLinkPushController.h"
 
 @interface MiLinkLoginViewManager()
 
@@ -39,24 +40,29 @@
     
     if (isLogin) {
         
-        [self.loginView removeFromSuperview];
+//        [self.loginView removeFromSuperview];
+//        
+//        [self.loginController.view addSubview:self.demonstrationView];
+//        
+//        [self.demonstrationView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            (void)make.edges;
+//        }];
+//        
+//        CAL_WEAK_SELF(weakSelf);
+//        
+//        [self.demonstrationView setMiLinkDemonstrationBlock:^{
+//            
+//            MiLinkRTMPController *miLinkRTMPController = [[MiLinkRTMPController alloc] init];
+//                        
+//            [weakSelf.loginController presentViewController:miLinkRTMPController
+//                                                   animated:YES
+//                                                 completion:nil];
+//        }];
         
-        [self.loginController.view addSubview:self.demonstrationView];
+        MiLinkPushController *pushController = [[MiLinkPushController alloc] init];
         
-        [self.demonstrationView mas_makeConstraints:^(MASConstraintMaker *make) {
-            (void)make.edges;
-        }];
-        
-        CAL_WEAK_SELF(weakSelf);
-        
-        [self.demonstrationView setMiLinkDemonstrationBlock:^{
-            
-            MiLinkRTMPController *miLinkRTMPController = [[MiLinkRTMPController alloc] init];
-                        
-            [weakSelf.loginController presentViewController:miLinkRTMPController
-                                                   animated:YES
-                                                 completion:nil];
-        }];
+        [self.loginController.navigationController pushViewController:pushController
+                                                             animated:YES];
         
         [[UIApplication sharedApplication] setStatusBarHidden:YES];
         

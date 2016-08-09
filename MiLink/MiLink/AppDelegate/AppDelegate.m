@@ -37,11 +37,19 @@
     
     MiLinkLoginController *loginViewController = [[MiLinkLoginController alloc] init];
     
-    self.window.rootViewController = loginViewController;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    navigationController.interactivePopGestureRecognizer.enabled = NO;
+    navigationController.navigationBar.hidden = YES;
+    
+    self.window.rootViewController = navigationController;
     
     if (!self.window.isKeyWindow) [self.window makeKeyAndVisible];
 
     return YES;
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return self.mask;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -22,15 +22,17 @@
 		A45968671D465C0300FF9EE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A45968651D465C0300FF9EE1 /* AppDelegate.m */; };
 		A45969DB1D46680A00FF9EE1 /* MiLinkLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45969D11D46680A00FF9EE1 /* MiLinkLoginController.m */; };
 		A45969DE1D46680A00FF9EE1 /* MiLinkLoginViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A45969DA1D46680A00FF9EE1 /* MiLinkLoginViewManager.m */; };
+		A467B2FC1D59B70C009084E5 /* MiLinkDemonstrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A467B2FB1D59B70C009084E5 /* MiLinkDemonstrationView.m */; };
 		A48FDF941D4760BB004F92C4 /* MiLinkLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF921D4760BB004F92C4 /* MiLinkLoginModel.m */; };
 		A48FDF971D4760E7004F92C4 /* MiLinkUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF961D4760E7004F92C4 /* MiLinkUserInfoModel.m */; };
 		A48FDF9B1D47619B004F92C4 /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDF9A1D47619B004F92C4 /* UserDataModel.m */; };
+		A4BB394A1D59655300B65B14 /* MiLinkPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BB39421D59655300B65B14 /* MiLinkPushController.m */; };
+		A4BB394C1D59655300B65B14 /* MiLinkPushViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BB39491D59655300B65B14 /* MiLinkPushViewManager.m */; };
 		A4C153E21D48B0F700A87DF3 /* MiLinkRTMPTarBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C153E11D48B0F700A87DF3 /* MiLinkRTMPTarBar.m */; };
 		A4C643CB1D47A7EF00F25B57 /* MiLinkRTMPController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C643CA1D47A7EF00F25B57 /* MiLinkRTMPController.m */; };
 		A4C643CE1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C643CD1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m */; };
 		A4C643D11D48418300F25B57 /* MiLinkRTMPViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C643D01D48418300F25B57 /* MiLinkRTMPViewManager.m */; };
 		A4C643D31D486CA500F25B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C643D21D486CA500F25B57 /* LaunchScreen.storyboard */; };
-		A4EFA8B21D489FBB00B5199B /* MiLinkDemonstrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA8AE1D489FBB00B5199B /* MiLinkDemonstrationView.m */; };
 		A4EFA8B31D489FBB00B5199B /* MiLinkLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EFA8B11D489FBB00B5199B /* MiLinkLoginView.m */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		A45969D91D46680A00FF9EE1 /* MiLinkLoginViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginViewManager.h; sourceTree = "<group>"; };
 		A45969DA1D46680A00FF9EE1 /* MiLinkLoginViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginViewManager.m; sourceTree = "<group>"; };
 		A45969E01D46682A00FF9EE1 /* MiLinkPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiLinkPrefixHeader.pch; sourceTree = "<group>"; };
+		A467B2FA1D59B70C009084E5 /* MiLinkDemonstrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkDemonstrationView.h; sourceTree = "<group>"; };
+		A467B2FB1D59B70C009084E5 /* MiLinkDemonstrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkDemonstrationView.m; sourceTree = "<group>"; };
 		A48FDF8F1D475D01004F92C4 /* MiLinkHTTPAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiLinkHTTPAddress.h; sourceTree = "<group>"; };
 		A48FDF911D4760BB004F92C4 /* MiLinkLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginModel.h; sourceTree = "<group>"; };
 		A48FDF921D4760BB004F92C4 /* MiLinkLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginModel.m; sourceTree = "<group>"; };
@@ -86,6 +90,10 @@
 		A48FDF961D4760E7004F92C4 /* MiLinkUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkUserInfoModel.m; sourceTree = "<group>"; };
 		A48FDF991D47619B004F92C4 /* UserDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataModel.h; sourceTree = "<group>"; };
 		A48FDF9A1D47619B004F92C4 /* UserDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataModel.m; sourceTree = "<group>"; };
+		A4BB39411D59655300B65B14 /* MiLinkPushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkPushController.h; sourceTree = "<group>"; };
+		A4BB39421D59655300B65B14 /* MiLinkPushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkPushController.m; sourceTree = "<group>"; };
+		A4BB39481D59655300B65B14 /* MiLinkPushViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkPushViewManager.h; sourceTree = "<group>"; };
+		A4BB39491D59655300B65B14 /* MiLinkPushViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkPushViewManager.m; sourceTree = "<group>"; };
 		A4C153E01D48B0F700A87DF3 /* MiLinkRTMPTarBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPTarBar.h; sourceTree = "<group>"; };
 		A4C153E11D48B0F700A87DF3 /* MiLinkRTMPTarBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkRTMPTarBar.m; sourceTree = "<group>"; };
 		A4C643C91D47A7EF00F25B57 /* MiLinkRTMPController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPController.h; sourceTree = "<group>"; };
@@ -95,8 +103,6 @@
 		A4C643CF1D48418300F25B57 /* MiLinkRTMPViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkRTMPViewManager.h; sourceTree = "<group>"; };
 		A4C643D01D48418300F25B57 /* MiLinkRTMPViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkRTMPViewManager.m; sourceTree = "<group>"; };
 		A4C643D21D486CA500F25B57 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A4EFA8AD1D489FBB00B5199B /* MiLinkDemonstrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkDemonstrationView.h; sourceTree = "<group>"; };
-		A4EFA8AE1D489FBB00B5199B /* MiLinkDemonstrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkDemonstrationView.m; sourceTree = "<group>"; };
 		A4EFA8B01D489FBB00B5199B /* MiLinkLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiLinkLoginView.h; sourceTree = "<group>"; };
 		A4EFA8B11D489FBB00B5199B /* MiLinkLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiLinkLoginView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				A45969CE1D46680A00FF9EE1 /* MiLinkLogin */,
+				A4BB393F1D59655300B65B14 /* MiLinkPush */,
 				A4C643C21D47A7DC00F25B57 /* MiLinkRTMP */,
 			);
 			path = MiLinkModular;
@@ -279,6 +286,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A467B2F91D59B70C009084E5 /* DemonstrationView */ = {
+			isa = PBXGroup;
+			children = (
+				A467B2FA1D59B70C009084E5 /* MiLinkDemonstrationView.h */,
+				A467B2FB1D59B70C009084E5 /* MiLinkDemonstrationView.m */,
+			);
+			path = DemonstrationView;
+			sourceTree = "<group>";
+		};
 		A48FDF901D4760BB004F92C4 /* LoginModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +320,42 @@
 				A48FDF9A1D47619B004F92C4 /* UserDataModel.m */,
 			);
 			path = UserDataModel;
+			sourceTree = "<group>";
+		};
+		A4BB393F1D59655300B65B14 /* MiLinkPush */ = {
+			isa = PBXGroup;
+			children = (
+				A4BB39401D59655300B65B14 /* Controller */,
+				A4BB39431D59655300B65B14 /* View */,
+				A4BB39471D59655300B65B14 /* ViewManager */,
+			);
+			path = MiLinkPush;
+			sourceTree = "<group>";
+		};
+		A4BB39401D59655300B65B14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4BB39411D59655300B65B14 /* MiLinkPushController.h */,
+				A4BB39421D59655300B65B14 /* MiLinkPushController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4BB39431D59655300B65B14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A467B2F91D59B70C009084E5 /* DemonstrationView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4BB39471D59655300B65B14 /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4BB39481D59655300B65B14 /* MiLinkPushViewManager.h */,
+				A4BB39491D59655300B65B14 /* MiLinkPushViewManager.m */,
+			);
+			path = ViewManager;
 			sourceTree = "<group>";
 		};
 		A4C643C21D47A7DC00F25B57 /* MiLinkRTMP */ = {
@@ -372,19 +424,9 @@
 		A4EFA8AB1D489FBB00B5199B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A4EFA8AC1D489FBB00B5199B /* DemonstrationView */,
 				A4EFA8AF1D489FBB00B5199B /* LoginView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A4EFA8AC1D489FBB00B5199B /* DemonstrationView */ = {
-			isa = PBXGroup;
-			children = (
-				A4EFA8AD1D489FBB00B5199B /* MiLinkDemonstrationView.h */,
-				A4EFA8AE1D489FBB00B5199B /* MiLinkDemonstrationView.m */,
-			);
-			path = DemonstrationView;
 			sourceTree = "<group>";
 		};
 		A4EFA8AF1D489FBB00B5199B /* LoginView */ = {
@@ -531,13 +573,15 @@
 				A48FDF971D4760E7004F92C4 /* MiLinkUserInfoModel.m in Sources */,
 				A4C153E21D48B0F700A87DF3 /* MiLinkRTMPTarBar.m in Sources */,
 				A45969DE1D46680A00FF9EE1 /* MiLinkLoginViewManager.m in Sources */,
+				A4BB394A1D59655300B65B14 /* MiLinkPushController.m in Sources */,
 				A4C643CB1D47A7EF00F25B57 /* MiLinkRTMPController.m in Sources */,
 				A45968671D465C0300FF9EE1 /* AppDelegate.m in Sources */,
-				A4EFA8B21D489FBB00B5199B /* MiLinkDemonstrationView.m in Sources */,
 				A48FDF941D4760BB004F92C4 /* MiLinkLoginModel.m in Sources */,
+				A467B2FC1D59B70C009084E5 /* MiLinkDemonstrationView.m in Sources */,
 				A4C643D11D48418300F25B57 /* MiLinkRTMPViewManager.m in Sources */,
 				A4C643CE1D47C70600F25B57 /* MiLinkRTMPNavigationBar.m in Sources */,
 				A45968321D4657AD00FF9EE1 /* main.m in Sources */,
+				A4BB394C1D59655300B65B14 /* MiLinkPushViewManager.m in Sources */,
 				A48FDF9B1D47619B004F92C4 /* UserDataModel.m in Sources */,
 				A45969DB1D46680A00FF9EE1 /* MiLinkLoginController.m in Sources */,
 				A4EFA8B31D489FBB00B5199B /* MiLinkLoginView.m in Sources */,

@@ -16,6 +16,12 @@
 
 @implementation MiLinkLoginController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [AppDelegate userInfoAppDelegate].mask = UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 

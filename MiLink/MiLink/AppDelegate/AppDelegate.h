@@ -13,6 +13,7 @@
 + (AppDelegate *)userInfoAppDelegate;
 
 @property (nonatomic, copy) NSString *pushURL;
+@property (nonatomic, assign) NSInteger mask;
 
 @property (strong, nonatomic) UIWindow *window;
 

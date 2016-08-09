@@ -17,21 +17,20 @@
 
 @implementation MiLinkPushController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
+    [AppDelegate userInfoAppDelegate].mask = UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.pushViewManager reloadLoginView];
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    
+        
     [self supportedInterfaceOrientations];
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-
-    NSLog(@"哈哈哈");
-    
-    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 - (MiLinkPushViewManager *)pushViewManager {

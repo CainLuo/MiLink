@@ -27,6 +27,8 @@
         [self addSubview:self.presentButton];
         
         [self addConstraints];
+        
+//        self.transform = CGAffineTransformMakeRotation(M_PI / 2);
     }
     
     return self;
@@ -36,16 +38,12 @@
     
     [self.demonstrationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.edges;
-//
-//        make.center.equalTo(self);
-//        
-//        make.height.mas_equalTo(CAL_SCREEN_WIDTH);
-//        make.width.mas_equalTo(CAL_SCREEN_HEIGHT);
     }];
     
     [self.tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.center.width.equalTo(self.demonstrationImageView);
+        make.center.equalTo(self);
+        make.left.right.equalTo(self).insets(UIEdgeInsetsMake(0, CAL_WIDTH_TO_FIT(150), 0, CAL_WIDTH_TO_FIT(150)));
     }];
     
     [self.presentButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,7 +61,7 @@
     
     _demonstrationImageView = [[UIImageView alloc] init];
     
-    _demonstrationImageView.image = [UIImage imageNamed:@"icon_demo"];
+    _demonstrationImageView.image = [UIImage imageNamed:@"icon_demo"];    
 
     return _demonstrationImageView;
 }

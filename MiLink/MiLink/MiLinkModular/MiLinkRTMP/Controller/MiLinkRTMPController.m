@@ -19,6 +19,12 @@
 
 @implementation MiLinkRTMPController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [AppDelegate userInfoAppDelegate].mask = UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
@@ -43,8 +49,6 @@
     [self.miLinkRTMPViewManager reloadViewManager];
     [self viewManagerBlock];
     [self initLivePublisher];
-    
-    [self.livePublisher setCameraOrientation:VIDEO_ORI_LANDSCAPE_REVERSE];
 }
 
 #pragma mark - Init Live Publisher
@@ -78,6 +82,9 @@
     [self.livePublisher setCameraOrientation:toInterfaceOrientation];
     
     switch (toInterfaceOrientation) {
+        case UIInterfaceOrientationPortrait:
+            [self.livePublisher setVideoOrientation:VIDEO_ORI_PORTRAIT];
+            break;
         case UIInterfaceOrientationLandscapeLeft:
             [self.livePublisher setVideoOrientation:VIDEO_ORI_LANDSCAPE_REVERSE];
             break;
@@ -269,6 +276,8 @@
 - (void)onEventCallback:(int)event msg:(NSString *)msg {
     
     CAL_WEAK_SELF(weakSelf);
+    
+    NSLog(@"Message: %@, Code: %d", msg, event);
     
     dispatch_async(dispatch_get_main_queue(), ^{
         switch (event) {
