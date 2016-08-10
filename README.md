@@ -16,4 +16,8 @@
 
 [MBProgressHUD](https://github.com/jdg/MBProgressHUD)
 
+---
 
+添加**`Framework`**的**`Bundle ID`**限制, 只能使用以下的**`Bundle ID`**才能够正常使用
+
+**`com.wx1wx.MiLinkDevelopment`**
