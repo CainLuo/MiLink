@@ -1,0 +1,6 @@
+framework module MiLinkFramework {
+  umbrella header "MiLinkFramework.h"
+
+  export *
+  module * { export * }
+}

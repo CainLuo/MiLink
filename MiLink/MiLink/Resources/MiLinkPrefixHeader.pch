@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <CALDeveloperKit/CALDeveloperKit.h>
+#import <MiLinkFramework/MiLinkFramework.h>
 
 #import "MiLinkHTTPAddress.h"
 #import "AppDelegate.h"
