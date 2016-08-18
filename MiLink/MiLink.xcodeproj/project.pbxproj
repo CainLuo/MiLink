@@ -505,7 +505,7 @@
 				TargetAttributes = {
 					A459682C1D4657AC00FF9EE1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = M67UHY3N8U;
+						DevelopmentTeam = Q3BS3Z279P;
 					};
 					A45968451D4657AD00FF9EE1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -725,9 +725,9 @@
 					"$(PROJECT_DIR)/MiLink/Framework",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkDevelopment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysj.MiLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "be0ae443-cd77-4106-9f87-096b8e109338";
+				PROVISIONING_PROFILE = "871c4609-fffe-4691-b2ef-d8f70d444ee1";
 			};
 			name = Debug;
 		};
@@ -752,9 +752,9 @@
 					"$(PROJECT_DIR)/MiLink/Framework",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkDevelopment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysj.MiLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "be0ae443-cd77-4106-9f87-096b8e109338";
+				PROVISIONING_PROFILE = "871c4609-fffe-4691-b2ef-d8f70d444ee1";
 			};
 			name = Release;
 		};
