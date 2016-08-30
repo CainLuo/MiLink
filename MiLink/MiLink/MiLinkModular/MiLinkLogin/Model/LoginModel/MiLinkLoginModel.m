@@ -41,8 +41,19 @@
                     MiLinkUserInfoModel *userInfoModel = [MiLinkUserInfoModel yy_modelWithJSON:responseObject];
                     
                     [AppDelegate userInfoAppDelegate].pushURL = userInfoModel.data.pushUrl;
-
-                    NSLog(@"%@", userInfoModel.data.pushUrl);
+                    
+                    if (userInfoModel.code == 120) {
+                        
+                        UIAlertView *loginFailedAlertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
+                                                                                       message:@"用户名或密码不正确"
+                                                                                      delegate:self
+                                                                             cancelButtonTitle:@"确定"
+                                                                             otherButtonTitles: nil];
+                        
+                        [loginFailedAlertView show];
+                        
+                        return;
+                    }
                     
                     [[NSUserDefaults standardUserDefaults] setObject:[userInfo objectForKey:@"username"]
                                                               forKey:@"userName"];
@@ -56,7 +67,7 @@
                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
                     UIAlertView *loginFailedAlertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
-                                                                                   message:@"用户名或密码不正确"
+                                                                                   message:@"网络请求失败, 请稍后再试"
                                                                                   delegate:self
                                                                          cancelButtonTitle:@"确定"
                                                                          otherButtonTitles: nil];

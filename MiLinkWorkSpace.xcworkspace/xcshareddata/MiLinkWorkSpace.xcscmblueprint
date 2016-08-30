@@ -5,6 +5,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "6FC4832245A6A8E50F2A782F20A8B58A46BD1FEB" : 0,
+    "C3339B365A7E5D6D5058E70B093D4E7EA5F9D6A9" : 0,
     "DF461CAADB13706454B17F2BB50F488BBAD743E5" : 0,
     "4182765C525509B305166AB949D5935FD5C85212" : 0,
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
@@ -13,6 +14,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0F2D796A-9EDA-4B24-80B8-FC2AB1A13C27",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "6FC4832245A6A8E50F2A782F20A8B58A46BD1FEB" : "..\/%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%BA%93\/Masonry",
+    "C3339B365A7E5D6D5058E70B093D4E7EA5F9D6A9" : "..\/%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%BA%93\/YYModel",
     "DF461CAADB13706454B17F2BB50F488BBAD743E5" : "..\/%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%BA%93\/IQKeyboardManager",
     "4182765C525509B305166AB949D5935FD5C85212" : "..\/%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%BA%93\/MBProgressHUD",
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "..\/%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%BA%93\/AFNetworking",
@@ -36,6 +38,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SnapKit\/Masonry.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6FC4832245A6A8E50F2A782F20A8B58A46BD1FEB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ibireme\/YYModel.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3339B365A7E5D6D5058E70B093D4E7EA5F9D6A9"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking.git",
