@@ -708,8 +708,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hunan Milian Network Technology Co., Ltd. (Q3BS3Z279P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hunan Milian Network Technology Co., Ltd. (Q3BS3Z279P)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,9 +725,9 @@
 					"$(PROJECT_DIR)/MiLink/Framework",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkDevelopment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysj.MiLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5845bec9-510b-4fbc-96ff-1e446c4c10c3";
+				PROVISIONING_PROFILE = "b32918f9-8eba-4c0f-9e50-4f6ab72af8d2";
 			};
 			name = Debug;
 		};
@@ -735,8 +735,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shujun Ouyang (2N9ZYJ2Z3W)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hunan Milian Network Technology Co., Ltd. (Q3BS3Z279P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hunan Milian Network Technology Co., Ltd. (Q3BS3Z279P)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -752,9 +752,9 @@
 					"$(PROJECT_DIR)/MiLink/Framework",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wx1wx.MiLinkDevelopment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysj.MiLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5845bec9-510b-4fbc-96ff-1e446c4c10c3";
+				PROVISIONING_PROFILE = "b32918f9-8eba-4c0f-9e50-4f6ab72af8d2";
 			};
 			name = Release;
 		};
